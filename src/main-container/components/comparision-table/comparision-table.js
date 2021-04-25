@@ -1,6 +1,6 @@
 import React from "react";
 import "./comparision-table.css";
-import { NO_PHOTO_ERROR, HEADING } from './comparision-table.constants'
+import { NO_PHOTO_ERROR, HEADING } from "./comparision-table.constants";
 
 const ComparisionTable = ({ photos }) => {
   if (photos.length === 0) return <div>{NO_PHOTO_ERROR}</div>;
@@ -17,7 +17,9 @@ const ComparisionTable = ({ photos }) => {
       <tbody>
         {photos.map((photo) => (
           <tr key={photo.id}>
-            <td> Photo {photo.id} </td>
+            <td>
+              <img src={photo.thumbnailUrl} alt="thumbnail"></img>
+            </td>
             <td> {photo.id} </td>
             <td> {photo.url} </td>
             <td> {photo.title} </td>
