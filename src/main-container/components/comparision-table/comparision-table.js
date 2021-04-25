@@ -1,15 +1,16 @@
 import React from "react";
 import "./comparision-table.css";
+import { NO_PHOTO_ERROR, HEADING } from './comparision-table.constants'
 
 const ComparisionTable = ({ photos }) => {
-  if (photos.length === 0) return <div>No photos up for comparision!</div>;
+  if (photos.length === 0) return <div>{NO_PHOTO_ERROR}</div>;
 
   return (
     <table className="comparision-table">
       <thead>
         <tr>
           <th className="table-heading" colSpan="4">
-            Comparision Table
+            {HEADING}
           </th>
         </tr>
       </thead>
