@@ -1,0 +1,14 @@
+.loading {
+    height: 100vh;
+    background-color: #FFDE03;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.loading-text {
+    padding-top: 30vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}

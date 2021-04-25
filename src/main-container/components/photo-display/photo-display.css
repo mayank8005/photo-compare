@@ -1,0 +1,33 @@
+.inline-block {
+  display: inline-block;
+}
+
+.photo-display {
+  width: 30%;
+  text-align: center;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo-display-title {
+  width: 150px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.photo-display-id {
+  display: block;
+}
+
+.photo-display-url {
+  display: block;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .photo-display {
+    width: 100%;
+    display: block;
+    height: 300px;
+  }
+}
