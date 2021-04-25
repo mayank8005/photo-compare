@@ -1,5 +1,6 @@
 import React from "react";
 import "./photo-display.css";
+import { URL, COMPARE_BUTTON_TEXT } from "./photo-display.constant";
 
 const PhotoDisplay = ({ photoData, toggleCompare }) => (
   <div className="photo-display inline-block">
@@ -7,11 +8,12 @@ const PhotoDisplay = ({ photoData, toggleCompare }) => (
     <div className="photo-display-title"> {photoData.title} </div>
     <div className="photo-display-id"> {photoData.id} </div>
     <a className="photo-display-url" href={photoData.url}>
-      {" "}
-      URL{" "}
+      {URL}
     </a>
     <button onClick={toggleCompare(photoData.id)}>
-      {photoData.compare ? "Remove" : "Compare"}
+      {photoData.compare
+        ? COMPARE_BUTTON_TEXT.REMOVE
+        : COMPARE_BUTTON_TEXT.COMPARE}
     </button>
   </div>
 );
